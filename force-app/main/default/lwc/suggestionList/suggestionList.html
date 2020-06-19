@@ -1,0 +1,13 @@
+<template>
+    <div class="slds-listbox slds-listbox_vertical">
+        <template for:each={suggestions} for:item="suggestion">
+            <c-suggestion key={suggestion.id}
+                suggestion-id={suggestion.id}
+                suggestion-title={suggestion.title}
+                suggestion-description={suggestion.description}
+                suggestion-icon-url={suggestion.iconUrl}
+                onmouseenter={handleSuggestionMouseEnter}
+                onclick={handleSuggestionClick}></c-suggestion>
+        </template>
+    </div>
+</template> 

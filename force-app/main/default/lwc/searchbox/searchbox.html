@@ -1,0 +1,20 @@
+<template>
+    <div class="slds-form-element">
+        <div class="slds-form-element__control">
+            <div class="slds-combobox_container">
+                <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+                    aria-expanded="true" aria-haspopup="listbox" role="combobox">
+                    <lightning-input onkeydown={handleKeydown} onblur={handleBlur} onchange={handleInput}
+                        onfocus={handleFocus} class="slds-input-has-icon_right" type="search" id="combobox-id-2"
+                        aria-autocomplete="list" aria-controls="listbox-id-2" autocomplete="off" role="textbox"
+                        placeholder="Search..." label="Relate to" is-loading={queryLoading}></lightning-input>
+                    <c-dropdown>
+                        <c-suggestion-list onmousedown={handleClickOnSuggestionList}
+                            onsuggestionselected={handleSuggestionSelected} suggestions={suggestions}>
+                        </c-suggestion-list>
+                    </c-dropdown>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
